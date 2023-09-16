@@ -1,5 +1,4 @@
-# Ayudantía - JavaScript, DOM y JQuery (con Bootstrap y Sass)
-
+# "Sistema de reportes para alumnos en programa de postgrado de escuela de informática de la PUCV"
 **INF3240 - Ingeniería Web**<br />
 **Escuela de Ingeniería Informática**<br />
 **Pontificia Universidad Católica de Valparaíso**
@@ -7,31 +6,23 @@
 <!-- omit in toc -->
 ## Índice
 <!--  -->
-- [Información](#información)
-  - [Datos ayudantía](#datos-ayudantía)
-  - [Tecnologías utilizadas](#tecnologías-utilizadas)
-  - [Archivos](#archivos)
-- [Pasos iniciales](#pasos-iniciales)
-- [Actividades](#actividades)
-  - [Actividad 1](#actividad-1)
-    - [Tips](#tips)
-  - [Actividad 2](#actividad-2)
-    - [Tips](#tips-1)
-  - [Actividad 3 (opcional)](#actividad-3-opcional)
+- [Información General]
+- [Tecnologías utilizadas]
+- [Archivos]
+- [Instrucciones de instalación]
+- [Funcionalidades]
 
-## Información
+## Información general
 
 
-**INF3240 - Ingeniería Web**<br />
-**Escuela de Ingeniería Informática**<br />
-**Pontificia Universidad Católica de Valparaíso**
-### Datos ayudantía
+- **INF3240 - Ingeniería Web**<br />
+- **Escuela de Ingeniería Informática**<br />
+- **Pontificia Universidad Católica de Valparaíso**
+- **Temática:** Visualización de datos
+- **Autor:** Patricio Ahumada Bonilla rut: 18.758.163-K
+- **Objetivo del proyecto:** El proyecto constará de un visualizador de información y estadísticas relevantes para el proceso de autoevaluación de postgrados, en el cual se examinan críticamente diferentes factores del programa (En este caso, de doctorados), para así poder destacar sus fortalezas y debilidades. El sistema recopilará y graficará el cruce de diversas fuentes de información manejada por el área docente y administrativa de la escuela; y mostrará las estadísticas requeridas por dichas áreas para facilitar así el desarrollo del informe de autoevaluación.
 
-- **Número:** 4
-- **Semana:** 4 al 8 de Septiembre de 2023
-- **Temática:** Agregar interactividad con JavaScript, crear proyecto de Node.js para frontend usando Vite.js, jQuery, validaciones de formularios y preprocesadores de CSS (Sass).
-
-### Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - [![bootstrap-badge]][bootstrap-web]
 - [![js-badge]][js-web]
@@ -39,17 +30,17 @@
 - [![jquery-badge]][jquery-web]
 - [![jquery-validate-badge]][jquery-validate-web]
 
-### Archivos
+## Archivos
 
-| Título             | Lenguaje | Archivo (link)                     |
-| ------------------ | -------- | ---------------------------------- |
-| ayudantia-4   | `carpeta zip`   | Descarga en Aula Virtual      |
+| Título             | Tipo       | Archivo (link)                     |
+| ------------------ | --------   | ---------------------------------- |
+| Proyecto-web       |Repositorio de GitHub|https://github.com/Pab705/Proyecto-web      |
 
-## Pasos iniciales
+## Instrucciones de instalación
 
-1. Descargar el archivo `ayudantia-4.zip` de la ayudantía desde Aula Virtual.
+1. Descargar el archivo `Proyecto-web-master.zip` desde el repositorio de GitHub.
 2. Descomprimir el archivo, de preferencia en el escritorio.
-3. Abrir la carpeta `ayudantia-4` en Visual Studio Code.
+3. Abrir la carpeta `Proyecto-web-master` en Visual Studio Code.
 4. Presionar las teclas <kbd>Ctrl</kbd> + <kbd>ñ</kbd> para abrir la terminal integrada de Visual Studio Code (también puede acceder presionando <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>, y escribiendo `terminal`).
 5. Instalar las dependencias de NPM con el comando:
     ```bash
@@ -60,64 +51,58 @@
     npm run dev
     ```
 
-## Actividades
+## Funcionalidades
 
-### Actividad 1
+### Registro
 
-Ir al archivo `regiones.js` en la carpeta `scripts`. En la línea 71 está el prototípo de la función que carga las regiones de Chile dentro del `<select>` del formulario. Utilizando JQuery y la manipulación del DOM, modifique la función para que cargue las regiones del arreglo dado (la constante `const regiones` de la línea 1)
+  Al ejecutar el programa nos encontraremos con la primera interface de registro. La cual contiene los campos de:
+  
+    - Nombre
+    - Rut (Necesario para inicio de sesión)
+    - Email
+    - Teléfono
+    - Contraseña
+    - Confirmación de contraseña
+    - Región
+    
+  El botón de registro enviará la información necesaria al DOM para validar los datos (No guarda los datos registrados, dado que no se ha implementado aún) y mostrará los errores cometidos por el usuario. Bajo este botón se encuentra un hipervínculo al módulo de Inicio de Sesión.
+  Adicionalmente, en el borde superior derecho se encuentra un botón para cambiar el tema de claro a oscuro y viceversa.
 
-#### Tips
+### Inicio de sesión
 
-1. Puedes usar el método `map()`, que te permite retornar todos los elementos de un array, pero modificados. Por ejemplo:
-   ```js
-   const numeros = [1, 2, 3, 4, 5];
+  El segundo módulo tiene la funcionalidad de validar los datos ingresados en los campos de RUT y Contraseña. Bajo estos campos encontramos el botón de inicio de sesión (Validación de usuario registraro no está implementada aún), el cual nos redirigirá a la primer interface de visualización de datos del programa, "Resumen por periodo".
+  Adicionalmente, en el borde superior derecho se encuentra un botón para cambiar el tema de claro a oscuro y viceversa.
 
-   const modificados = numeros.map((numero) => {
-     return '<p>Número ' + numero + '</p>';
-   })
-   
-   /* Esto nos imprimirá:
-    * <p>Número 1</p>
-    * <p>Número 2</p>
-    * <p>Número 3</p>
-    * <p>Número 4</p>
-    * <p>Número 5</p>
-    */
-   console.log(modificados);
-   ```
-2. Puedes usar JQuery y la manipulación del DOM (`$`) para obtener el elemento `<select>` con el id `#region`. Dentro de los `<select>` los elementos se etiquetan con `<option>`
+### Resumen por periodo
 
-### Actividad 2
+  En este modulo encontraremos información relevante sobre los alumnos que cursan o cursaron el programa de doctorados en el periodo seleccionado en el grupo de botones (últimos 10 años, últimos 5 años, último año y semestre actual). Además, podremos visualizar algunos gráficos generales de relevancia a modo de resumen presupuestario e información sociológica de los alumnos matriculados. También podremos visualizar el estado de acreditación actual de la escuela.
+  Tendremos además un botón (Bajo el logo) que despliega un menú para acceder a los distintos módulos del programa.
+  Al costado derecho del logo de la escuela, encontraremos una barra de búsqueda para acceder a algún participante del programa.
+ 
+### Recursos
 
-Ir al archivo `reglas.js` dentro de la carpeta `scripts`. En la línea 5 está el prototipo de la función que valida el dígito verificador del RUT ingresado. Utilizando JQuery y la manipulación del DOM, modifique la función para que valide el dígito verificador del RUT ingresado en el formulario.
+  En el módulo Recursos, podremos visualizar información graficada relevante a montos invertidos por la escuela, asignaciones directas a alumnos para concepto de becas, pasantías y eventos
 
-#### Tips
+### Estadísticas
 
-1. Puedes usar el método `split()` para separar un string en un array, utilizando un separador. Por ejemplo:
-   ```js
-   const rut = '12345678-9';
-   const rutSeparado = rut.split('-');
-   /* Esto nos imprimirá:
-    * ['12345678', '9']
-    */
-   console.log(rutSeparado);
-   ```
-   `split()` nos devuelve un array con los elementos separados por el separador que le pasamos como parámetro. En este caso, el separador es `-`. Esto nos permite lo siguiente:
-    ```js
-    const [ numero, dv ] = rut.split('-');
-    ```
-    En donde `numero` es el número del RUT, y `dv` es el dígito verificador.
-2. El dígito verificador de los RUTs en Chile se calcula matemáticamente a través del "Módulo 11". Puedes buscar información en internet.
+  En el presente módulo de Estadísticas, visualizaremos la graficación de todo el cruce de información relevante al proceso de autoevaluación del programa de doctorado, tanto demográfica como económica.
 
-### Actividad 3 (opcional)
+### Comunidad
 
-Utilizando cualquiera (o combinaciones entre ellas) de las siguientes metodologías:
+  En el módulo de comunidad, veremos una lista de los estudiantes participando del programa en el periodo seleccionado, además de una barra de progreso que otorga información rápida al lector sobre el semestre que está cursando el alumno, (Muestra la etiqueta "EXTENDIDO" si el alumno prolongó su estadía en el programa sobre los 8 semestres), estado de avance del alumno y los hitos más importantes del programa (Examen de candidatura y examen de grado). Estas barras cambiarán de color según el estado actual del alumno (VERDE si cursa normalmente el programa o si fue aprobado; AMARILLO si el alumno se encuentra en una interrupción de estudios o cursa el último semestre permitido por el programa {Máximo 12}; y ROJA si el alumno se retiró del programa o reprobó)
 
-- Modificar el DOM para añadir clases y estilos a los elementos.
-- Modificar el archivo de estilos de Sass `.scss`.
-- Aprovechar las clases y componentes de Bootstrap.
+### Perfil de alumno
 
-Modifique el archivo `tema.js` dentro de la carpeta `scripts`, para agregar o modificar el tema (colores) del formulario. Las modificaciones puedes hacerlas a tu gusto personal, y te puedes apoyar de Coolors.co para generar paletas de colores (el link está en el Aula Virtual).
+  En el perfil de alumno, se muestra información general de este, también una barra de progreso en el programa junto a destacadores de los hitos: Inicio en el programa, Examen de candidatura, interrupción de estudios (Si existe) y examen de grado. Al igual que las barras de progreso presentes en el módulo de comunidad, estas cambiarán de color según el estado actual del alumno. 
+  Además, encontraremos una barra de navegación con las siguientes categorías de información:
+  
+  - Perfil
+  - Publicaciones: Información sobre la cantidad de publicaciones realizadas por el alumno.
+  - Pasantías: Responsable en lugar de origen y destino, lugar de destino y gráficos con información sobre recursos asignados.
+  - Becas: Institución que otorga el beneficio, semestres en que se perciben y totales de recursos asignados, junto con gráficos correspondientes.
+  - Eventos: Información relevante sobre los eventos a los que ha asistido el alumno, generalmente charlas.
+
+
 
 [bootstrap-badge]: https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff&style=flat
 [bootstrap-web]: https://getbootstrap.com/
