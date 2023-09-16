@@ -10,6 +10,7 @@
 - [Tecnologías utilizadas]
 - [Archivos]
 - [Instrucciones de instalación]
+- [Mockups en Figma]
 - [Funcionalidades]
 
 ## Información general
@@ -50,6 +51,11 @@
     ```bash
     npm run dev
     ```
+
+## Mockups en figma
+
+Archivo (link)
+   : https://www.figma.com/file/QpQEfX8d213tAWWk1nEoym/Untitled?type=design&mode=design&t=eODBBcDeqkMkEXvM-1
 
 ## Funcionalidades
 
