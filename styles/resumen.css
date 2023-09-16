@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    background-color: whitesmoke;
+ }
+ 
+ main {
+     display: flex;
+ }
+ 
+ header{
+    background-color: whitesmoke;
+    font-size: 1.2rem;
+    width: 400px;
+    height: auto;
+    padding: 10px;
+
+}
+input.form-control.me-2{
+    width: 400px;
+}
+
+aside#searchBar {
+    height: auto;
+}
+
+nav.navbar.bg-body-tertiary {
+    height: 15%;
+    margin: 10px;
+}
+
+a.btn.btn-primary.btn-dark {
+   height: 40px;
+   margin-left: auto;
+   margin-top: 10px;
+   margin-right: 10px;
+   background-color:#4285F4 ;
+}
+
+
+img.logo {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+    height: auto;
+ }
+ 
+ aside{
+     width: 30%;
+     height: auto;
+     background-color:whitesmoke;
+     display: flex;
+     flex-direction: column;
+ 
+ }
+ 
+ aside > h3{
+     padding: 10px;
+     color: gray;
+     text-align:left;
+     font-size: 1rem;
+ }
+ 
+ ul li{
+     padding: 10px;
+     margin: 10px;
+     width: 480px;
+     height:auto;
+     display: flex;
+     color: aliceblue;
+ }
+ 
+ .btn-group {
+    margin-left: 60%;
+    margin-bottom: 20px;
+}
+
+.right-align {
+        float: right;
+}
+
+ section#barrasup > div#searchbar{
+     height: 15.5vh;
+     width: 70%;
+     margin-left: 80px;
+     background-color: whitesmoke;
+     position:absolute;
+ }
+ 
+ div#searchbar > input{
+     padding: 5px;
+     margin: 10px;
+     margin-top: 40px;
+     border-color:rgb(213, 231, 247) ;
+     background-color:whitesmoke;
+     width: 20%;
+ }
+ 
+ div#searchbar > h3{
+     color: aliceblue;
+     font-size: 0.9rem;
+     text-align:justify;
+     padding: 10px;
+ }
+ article{
+    margin-left:200px;
+    margin-top:130px;
+    position: absolute;
+
+ }
+ 
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .grid-containerRecursos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .grid-container img {
+    width: 100;
+    height: auto;
+    object-fit:fill;
+  }
+
+  a.nav-link {
+    margin:10px;
+    padding-right:30%;
+  }
+  a.nav-link.actual{
+    background-color: #4285F4;
+    color: white;
+    padding-left: 10px;
+  }

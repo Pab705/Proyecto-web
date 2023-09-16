@@ -1,0 +1,81 @@
+@import "bootstrap/scss/bootstrap";
+
+$fb-color: #1877F2;
+$google-color: #4285F4;
+$gh-color: #DDDDDD;
+
+div.mode-toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1em;
+}
+
+
+
+.logo {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    margin-right: 10px;
+}
+div.form-floating > input.form-control, select.form-select {
+    & ~ label::after  {
+        background-color: transparent !important;
+    }
+
+    &.is-invalid {
+        background-color: #fdedee;
+
+        &.dark-mode {
+            background-color: #300303;
+        }
+
+        & ~ label  {
+            color: $red-500 !important;
+        }
+    }
+
+    &.dark-mode {
+        background-color: $dark;
+        color: $light;
+        & ~ label  {
+            color: $gray-400;
+        }
+    }
+}
+
+a#loginBtn {
+    color: white;
+}
+  
+.iniciarSesion:hover{
+    color: whitesmoke;
+  }
+  
+.iniciarSesion:active{
+    color: whitesmoke;
+  }
+div#social-login {
+    > a {
+        &#fb-icon:hover > svg {
+            fill: $fb-color;
+        }
+
+        &#google-icon:hover > svg {
+            fill: $google-color;
+        }
+
+        &#gh-icon:hover > svg {
+            fill: $gh-color;
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    main {
+        padding-top: $spacer * 5.2;
+    }
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles/resumen.css">
+        <script type="module" src="main.js"></script>
+    </head>
+    <body>
+        <main>
+            <aside>
+                <header>
+                    <img class="logo" src="assets/images/logo.png"/>
+                </header>
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link actual" href="/resumen.html">Resumen por periodo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/recursos.html">Recursos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/estadisticas.html">Estadísticas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/comunidad.html">Comunidad</a>
+                                </li>
+                            </ul>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                    </nav>
+            </aside>
+            <aside id="searchBar">
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                      <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar alumno/docente" aria-label="Search">
+                        <button class="btn btn-outline-success" type="">Buscar</button>
+                      </form>
+                    </div>
+                  </nav>
+                </aside>
+                <a href="/login.html" class="btn btn-primary">Salir</a>
+                <article>
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="btnradio1">Últimos 10 años</label>
+                      
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio2">Últimos 5 años</label>
+                      
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio3">Último año</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio4">Semestre actual</label>
+                      </div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Fecha ingreso al programa</th>
+                            <th scope="col">Institución procedencia (Pregrado)</th>
+                            <th scope="col">Progreso del alumno</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Antonio Jose Rienzo Renato</td>
+                                <td>2020-1 (Semestre)</td>
+                                <td>PUCV</td>
+                                <td><img src="/assets/images/Comunidad-progressbar/pb1.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Antonio Jose Rienzo Renato</td>
+                                <td>2020-1 (Semestre)</td>
+                                <td>PUCV</td>
+                                <td><img src="/assets/images/Comunidad-progressbar/pb2.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Antonio Jose Rienzo Renato</td>
+                                <td>2020-1 (Semestre)</td>
+                                <td>PUCV</td>
+                                <td><img src="/assets/images/Comunidad-progressbar/pb4.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>Antonio Jose Rienzo Renato</td>
+                                <td>2020-1 (Semestre)</td>
+                                <td>PUCV</td>
+                                <td><img src="/assets/images/Comunidad-progressbar/pb4.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td>Antonio Jose Rienzo Renato</td>
+                                <td>2020-1 (Semestre)</td>
+                                <td>PUCV</td>
+                                <td><img src="/assets/images/Comunidad-progressbar/pb5.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">6</th>
+                                <td>Antonio Jose Rienzo Renato</td>
+                                <td>2020-1 (Semestre)</td>
+                                <td>PUCV</td>
+                                <td><img src="/assets/images/Comunidad-progressbar/pb3.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">7</th>
+                                <td>Antonio Jose Rienzo Renato</td>
+                                <td>2020-1 (Semestre)</td>
+                                <td>PUCV</td>
+                                <td><img src="/assets/images/Comunidad-progressbar/pb2.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">8</th>
+                                <td>Antonio Jose Rienzo Renato</td>
+                                <td>2020-1 (Semestre)</td>
+                                <td>PUCV</td>
+                                <td><img src="/assets/images/Comunidad-progressbar/pb1.png" alt=""></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">9</th>
+                                <td>Antonio Jose Rienzo Renato</td>
+                                <td>2020-1 (Semestre)</td>
+                                <td>PUCV</td>
+                                <td><img src="/assets/images/Comunidad-progressbar/pb4.png" alt=""></td>
+                              </tr>
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                        </tbody>
+                    </table>                   
+                </article>
+        </main>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
